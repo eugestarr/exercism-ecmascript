@@ -4,10 +4,8 @@
 //
 
 class HelloWorld {
-  hello(name) {
-    name = name || "World";
-    let hello = "Hello, ";
-    return hello + name + "!";
+  hello(name = 'World') {
+    return `Hello, ${name}!`;
   }
 }
 
