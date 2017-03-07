@@ -22,8 +22,7 @@ var Transcriptor = (function () {
 
             var output = [],
                 pair = undefined;
-            input = input.split('');
-            return input.map(function (el) {
+            return input.split('').map(function (el) {
                 if (!(pair = _this.map[el])) throw new Error('Invalid input DNA.');
                 return pair;
             }).join('');

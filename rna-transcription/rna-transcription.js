@@ -5,8 +5,7 @@ export default class Transcriptor {
 
     toRna (input) {
         let output = [], pair;
-        input = input.split('');
-        return input.map(el => {
+        return input.split('').map(el => {
             if (!(pair = this.map[el]))
                 throw new Error('Invalid input DNA.');
             return pair;
