@@ -4,13 +4,12 @@ export default class Transcriptor {
     }
 
     toRna (input) {
-        let output = [], m;
+        let output = [], pair;
         input = input.split('');
-        input.map(el => {
-            if (!(m = this.map[el]))
+        return input.map(el => {
+            if (!(pair = this.map[el]))
                 throw new Error('Invalid input DNA.');
-            output.push(m);
-        });
-        return output.join('');
+            return pair;
+        }).join('');
     }
 }

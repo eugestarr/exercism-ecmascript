@@ -21,13 +21,12 @@ var Transcriptor = (function () {
             var _this = this;
 
             var output = [],
-                m = undefined;
+                pair = undefined;
             input = input.split('');
-            input.map(function (el) {
-                if (!(m = _this.map[el])) throw new Error('Invalid input DNA.');
-                output.push(m);
-            });
-            return output.join('');
+            return input.map(function (el) {
+                if (!(pair = _this.map[el])) throw new Error('Invalid input DNA.');
+                return pair;
+            }).join('');
         }
     }]);
 
